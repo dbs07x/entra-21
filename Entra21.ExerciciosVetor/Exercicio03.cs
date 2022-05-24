@@ -12,7 +12,7 @@ namespace Entra21.ExerciciosVetor
         {
             //Crie dois vetores para guardar o nome e preço de 7 produtos e apresente o nome e preço dos sete produtos
 
-            var nomes = new string[2];
+            var nomes = new string[7];
             var precos = new double[nomes.Length];
             for (int i = 0; i < nomes.Length; i++)
             {
@@ -25,7 +25,7 @@ namespace Entra21.ExerciciosVetor
             Console.Clear();
             for (int i = 0; i < nomes.Length; i++)
             {
-                Console.WriteLine("Produto: " + nomes[i] + " | " + "Preço: R$" + precos[i]);
+                Console.WriteLine("Produto: " + nomes[i] + " - " + "Preço: R$" + precos[i]);
             }
         }
     }
