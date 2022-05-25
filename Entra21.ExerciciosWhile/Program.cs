@@ -23,3 +23,8 @@ if (menu == 3)
     Exercicio03 exercicio03 = new Exercicio03();
     exercicio03.Executar();
 }
+if (menu == 4)
+{
+    Exercicio04 exercicio04 = new Exercicio04();
+    exercicio04.Executar();
+}
