@@ -6,6 +6,7 @@ Console.WriteLine(@"1 - Exercício 01
 4 - Exercício 04
 5 - Exercício 05
 6 - Exercício 06
+7 - Exercício 07
 ");
 
 Console.WriteLine("Escolha um item no menu: ");
@@ -40,4 +41,9 @@ if (menu == 6)
 {
     Exercicio06 exercicio06 = new Exercicio06();
     exercicio06.Executar();
+}
+if (menu == 7)
+{
+    Exercicio07 exercicio07 = new Exercicio07();
+    exercicio07.Executar();
 }
