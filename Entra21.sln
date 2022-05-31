@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosOrientacaoO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosOrientacaoObjetos.Tests", "Entra21.ExemplosOrientacaoObjetos.Tests\Entra21.ExemplosOrientacaoObjetos.Tests.csproj", "{02F748DE-D6E7-4B02-8531-9CF43C683330}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosOrientacaoObjetos", "Entra21.ExerciciosOrientacaoObjetos\Entra21.ExerciciosOrientacaoObjetos.csproj", "{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{02F748DE-D6E7-4B02-8531-9CF43C683330}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02F748DE-D6E7-4B02-8531-9CF43C683330}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02F748DE-D6E7-4B02-8531-9CF43C683330}.Release|Any CPU.Build.0 = Release|Any CPU
+		{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
