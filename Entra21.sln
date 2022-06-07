@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebook", "Notebook\Notebook.csproj", "{B94E3F75-1019-4CDC-92FB-FF180E2481CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notebook", "Notebook\Notebook.csproj", "{B94E3F75-1019-4CDC-92FB-FF180E2481CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosVetor", "Entra21.ExerciciosVetor\Entra21.ExerciciosVetor.csproj", "{57C72C78-6DC0-4C49-A2A8-A07C1CD51F05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosVetor", "Entra21.ExerciciosVetor\Entra21.ExerciciosVetor.csproj", "{57C72C78-6DC0-4C49-A2A8-A07C1CD51F05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosSolicitacaoDeInformacao", "Entra21.ExerciciosSolicitacaoDeInformacao\Entra21.ExerciciosSolicitacaoDeInformacao.csproj", "{1F684A48-525B-44D0-BF83-0496339A29D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosSolicitacaoDeInformacao", "Entra21.ExerciciosSolicitacaoDeInformacao\Entra21.ExerciciosSolicitacaoDeInformacao.csproj", "{1F684A48-525B-44D0-BF83-0496339A29D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{2E8630C1-F7CE-40CB-98DD-02685E965FF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{2E8630C1-F7CE-40CB-98DD-02685E965FF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosOrientacaoObjetos", "Entra21.ExemplosOrientacaoObjetos\Entra21.ExemplosOrientacaoObjetos.csproj", "{0C1A1AC0-9282-4BD2-919E-F3343E619A66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoObjetos", "Entra21.ExemplosOrientacaoObjetos\Entra21.ExemplosOrientacaoObjetos.csproj", "{0C1A1AC0-9282-4BD2-919E-F3343E619A66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosOrientacaoObjetos.Tests", "Entra21.ExemplosOrientacaoObjetos.Tests\Entra21.ExemplosOrientacaoObjetos.Tests.csproj", "{02F748DE-D6E7-4B02-8531-9CF43C683330}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoObjetos.Tests", "Entra21.ExemplosOrientacaoObjetos.Tests\Entra21.ExemplosOrientacaoObjetos.Tests.csproj", "{02F748DE-D6E7-4B02-8531-9CF43C683330}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosOrientacaoObjetos", "Entra21.ExerciciosOrientacaoObjetos\Entra21.ExerciciosOrientacaoObjetos.csproj", "{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientacaoObjetos", "Entra21.ExerciciosOrientacaoObjetos\Entra21.ExerciciosOrientacaoObjetos.csproj", "{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.EexerciciosLista", "Entra21.EexerciciosLista\Entra21.EexerciciosLista.csproj", "{0B46A604-29D0-4F98-AB2E-0F164E157916}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{209ABAFF-E1EB-4F67-88C5-EFBD71D01EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B46A604-29D0-4F98-AB2E-0F164E157916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B46A604-29D0-4F98-AB2E-0F164E157916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B46A604-29D0-4F98-AB2E-0F164E157916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B46A604-29D0-4F98-AB2E-0F164E157916}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
