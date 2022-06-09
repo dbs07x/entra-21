@@ -1,4 +1,5 @@
 ﻿using Entra21.EexerciciosLista;
+using Entra21.ExerciciosLista;
 
 Console.WriteLine(@"1 - Exercício 01
 2 - Exercício 02
@@ -25,4 +26,10 @@ if (menu == 3)
     Console.Clear();
     Exercicio03 exercicio03 = new Exercicio03();
     exercicio03.Executar();
+}
+if (menu == 4)
+{
+    Console.Clear();
+    ProdutoControlador controlador = new ProdutoControlador();
+    controlador.GerenciarMenu();
 }
