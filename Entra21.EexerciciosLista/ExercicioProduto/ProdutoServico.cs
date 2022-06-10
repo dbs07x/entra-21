@@ -7,7 +7,6 @@
         private List<Produto> produtos = new List<Produto>();
         // Armazenar o código do próximo produto
         private int codigoAtual = 1;
-
         public void Adicionar(string nome, double precoUnitario, ProdutoLocalizacao localizacao, int quantidade)
         {
             // Instanciar um objeto da classe Produto
@@ -82,7 +81,6 @@
         {
             return produtos;
         }
-
         public Produto ObterPorCodigo(int codigo)
         {
             // Percorrer todos os elementos para encontrar o produto
