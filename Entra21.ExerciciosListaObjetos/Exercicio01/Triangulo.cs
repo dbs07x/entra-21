@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entra21.ExerciciosLista
+﻿namespace Entra21.ExerciciosListaObjetos.Exercicio01
 {
-    internal class Triangulo
+    public class Triangulo
     {
         public int Codigo;
         public int Lado1;
@@ -15,7 +9,11 @@ namespace Entra21.ExerciciosLista
 
         public bool ValidarTriangulo()
         {
-            //se a soma das medidas de dois deles é sempre maior que a medida do terceiro, então, eles podem formar um triângulo
+            //Só irá existir um triângulo se: a soma das medidas de dois lados é sempre maior que a medida do terceiro
+            if ((Lado1 + Lado2 < Lado3) || (Lado2 + Lado3 < Lado1) || (Lado3 + Lado1 < Lado2))
+            {
+                return false;
+            }
             return true;
         }
     }
