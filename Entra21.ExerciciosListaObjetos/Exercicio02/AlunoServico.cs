@@ -50,7 +50,9 @@
 
             for (int i = 0; i < alunos.Count; i++)
             {
-                nomes.Add(alunos[i].Nome);
+                var nomeAtual = alunos[i].Nome;
+
+                nomes.Add(nomeAtual);
             }
 
             return nomes;
