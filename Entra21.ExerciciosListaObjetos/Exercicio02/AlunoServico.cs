@@ -26,6 +26,14 @@
 
         public bool RemoverAluno(string nome)
         {
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                Aluno aluno = alunos[i];
+                if (aluno.Nome == nome)
+                {
+                    alunos.RemoveAt(i);
+                }
+            }
             return false;
         }
 
