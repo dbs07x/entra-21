@@ -44,6 +44,18 @@
 
         public bool EditarNotasAluno(int codigoMatricula, double nota1, double nota2, double nota3)
         {
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                Aluno alunoAtual = alunos[i];
+                if (alunoAtual.CodigoMatricula == codigoMatricula)
+                {
+                    alunoAtual.Nota1 = nota1;
+                    alunoAtual.Nota2 = nota2;
+                    alunoAtual.Nota3 = nota3;
+                    return true;
+                }
+            }
+
             return false;
         }
 
