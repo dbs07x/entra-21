@@ -1,3 +1,5 @@
+using Entra21.ExemplosWindowsForms.Exemplo01;
+
 namespace Entra21.ExemplosWindowsForms
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace Entra21.ExemplosWindowsForms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new PacientesForm());
         }
     }
 }
