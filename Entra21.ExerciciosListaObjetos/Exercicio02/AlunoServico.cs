@@ -82,6 +82,13 @@
         {
             var medias = new List<double>();
 
+            for (var i = 0; i < alunos.Count; i++)
+            {
+                var alunoAtual = alunos[i];
+
+                medias.Add(alunoAtual.CalcularMedia());
+            }
+
             return medias;
         }
 
