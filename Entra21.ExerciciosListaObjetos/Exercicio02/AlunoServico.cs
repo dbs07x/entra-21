@@ -96,6 +96,16 @@
         {
             var aprovados = new List<string>();
 
+            for (var i = 0; i < alunos.Count; i++)
+            {
+                var alunoAtual = alunos[i];
+
+                if (alunoAtual.ObterStatus() == AlunoStatus.Aprovado)
+                {
+                    aprovados.Add(alunoAtual.Nome);
+                }
+            }
+
             return aprovados;
         }
 
