@@ -31,6 +31,10 @@
             this.labelEnderecos = new System.Windows.Forms.Label();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEnderecoCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelCep = new System.Windows.Forms.Label();
             this.labelEnderecoCompleto = new System.Windows.Forms.Label();
             this.textBoxEnderecoCompleto = new System.Windows.Forms.TextBox();
@@ -40,28 +44,25 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.comboBoxPaciente = new System.Windows.Forms.ComboBox();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEnderecoCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelEnderecos
             // 
             this.labelEnderecos.AutoSize = true;
-            this.labelEnderecos.Location = new System.Drawing.Point(12, 9);
+            this.labelEnderecos.Location = new System.Drawing.Point(10, 7);
             this.labelEnderecos.Name = "labelEnderecos";
-            this.labelEnderecos.Size = new System.Drawing.Size(77, 20);
+            this.labelEnderecos.Size = new System.Drawing.Size(61, 15);
             this.labelEnderecos.TabIndex = 0;
             this.labelEnderecos.Text = "Endereços";
             // 
             // maskedTextBoxCep
             // 
-            this.maskedTextBoxCep.Location = new System.Drawing.Point(919, 55);
+            this.maskedTextBoxCep.Location = new System.Drawing.Point(804, 41);
+            this.maskedTextBoxCep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBoxCep.Mask = "99999-999";
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
-            this.maskedTextBoxCep.Size = new System.Drawing.Size(125, 27);
+            this.maskedTextBoxCep.Size = new System.Drawing.Size(110, 23);
             this.maskedTextBoxCep.TabIndex = 1;
             // 
             // dataGridView1
@@ -75,96 +76,16 @@
             this.ColumnEnderecoCompleto,
             this.ColumnCep,
             this.ColumnPaciente});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 34);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(879, 406);
+            this.dataGridView1.Size = new System.Drawing.Size(769, 304);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // labelCep
-            // 
-            this.labelCep.AutoSize = true;
-            this.labelCep.Location = new System.Drawing.Point(919, 22);
-            this.labelCep.Name = "labelCep";
-            this.labelCep.Size = new System.Drawing.Size(34, 20);
-            this.labelCep.TabIndex = 3;
-            this.labelCep.Text = "CEP";
-            // 
-            // labelEnderecoCompleto
-            // 
-            this.labelEnderecoCompleto.AutoSize = true;
-            this.labelEnderecoCompleto.Location = new System.Drawing.Point(919, 85);
-            this.labelEnderecoCompleto.Name = "labelEnderecoCompleto";
-            this.labelEnderecoCompleto.Size = new System.Drawing.Size(141, 20);
-            this.labelEnderecoCompleto.TabIndex = 4;
-            this.labelEnderecoCompleto.Text = "Endereço Completo";
-            // 
-            // textBoxEnderecoCompleto
-            // 
-            this.textBoxEnderecoCompleto.Location = new System.Drawing.Point(919, 108);
-            this.textBoxEnderecoCompleto.Name = "textBoxEnderecoCompleto";
-            this.textBoxEnderecoCompleto.Size = new System.Drawing.Size(346, 27);
-            this.textBoxEnderecoCompleto.TabIndex = 5;
-            // 
-            // labelPaciente
-            // 
-            this.labelPaciente.AutoSize = true;
-            this.labelPaciente.Location = new System.Drawing.Point(919, 149);
-            this.labelPaciente.Name = "labelPaciente";
-            this.labelPaciente.Size = new System.Drawing.Size(64, 20);
-            this.labelPaciente.TabIndex = 6;
-            this.labelPaciente.Text = "Paciente";
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Location = new System.Drawing.Point(226, 0);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(94, 29);
-            this.buttonEditar.TabIndex = 8;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            // 
-            // buttonApagar
-            // 
-            this.buttonApagar.Location = new System.Drawing.Point(326, 0);
-            this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(94, 29);
-            this.buttonApagar.TabIndex = 9;
-            this.buttonApagar.Text = "Apagar";
-            this.buttonApagar.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(1056, 233);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancelar.TabIndex = 10;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.Location = new System.Drawing.Point(1171, 233);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
-            this.buttonSalvar.TabIndex = 11;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            // 
-            // comboBoxPaciente
-            // 
-            this.comboBoxPaciente.DisplayMember = "Nome";
-            this.comboBoxPaciente.FormattingEnabled = true;
-            this.comboBoxPaciente.Location = new System.Drawing.Point(919, 172);
-            this.comboBoxPaciente.Name = "comboBoxPaciente";
-            this.comboBoxPaciente.Size = new System.Drawing.Size(346, 28);
-            this.comboBoxPaciente.TabIndex = 12;
-            this.comboBoxPaciente.ValueMember = "Codigo";
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // ColumnCodigo
             // 
@@ -199,12 +120,102 @@
             this.ColumnPaciente.ReadOnly = true;
             this.ColumnPaciente.Width = 125;
             // 
+            // labelCep
+            // 
+            this.labelCep.AutoSize = true;
+            this.labelCep.Location = new System.Drawing.Point(804, 16);
+            this.labelCep.Name = "labelCep";
+            this.labelCep.Size = new System.Drawing.Size(28, 15);
+            this.labelCep.TabIndex = 3;
+            this.labelCep.Text = "CEP";
+            // 
+            // labelEnderecoCompleto
+            // 
+            this.labelEnderecoCompleto.AutoSize = true;
+            this.labelEnderecoCompleto.Location = new System.Drawing.Point(804, 64);
+            this.labelEnderecoCompleto.Name = "labelEnderecoCompleto";
+            this.labelEnderecoCompleto.Size = new System.Drawing.Size(112, 15);
+            this.labelEnderecoCompleto.TabIndex = 4;
+            this.labelEnderecoCompleto.Text = "Endereço Completo";
+            // 
+            // textBoxEnderecoCompleto
+            // 
+            this.textBoxEnderecoCompleto.Location = new System.Drawing.Point(804, 81);
+            this.textBoxEnderecoCompleto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxEnderecoCompleto.Name = "textBoxEnderecoCompleto";
+            this.textBoxEnderecoCompleto.Size = new System.Drawing.Size(303, 23);
+            this.textBoxEnderecoCompleto.TabIndex = 5;
+            // 
+            // labelPaciente
+            // 
+            this.labelPaciente.AutoSize = true;
+            this.labelPaciente.Location = new System.Drawing.Point(804, 112);
+            this.labelPaciente.Name = "labelPaciente";
+            this.labelPaciente.Size = new System.Drawing.Size(52, 15);
+            this.labelPaciente.TabIndex = 6;
+            this.labelPaciente.Text = "Paciente";
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(198, 0);
+            this.buttonEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(82, 22);
+            this.buttonEditar.TabIndex = 8;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // buttonApagar
+            // 
+            this.buttonApagar.Location = new System.Drawing.Point(285, 0);
+            this.buttonApagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(82, 22);
+            this.buttonApagar.TabIndex = 9;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(924, 175);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(82, 22);
+            this.buttonCancelar.TabIndex = 10;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.Location = new System.Drawing.Point(1025, 175);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(82, 22);
+            this.buttonSalvar.TabIndex = 11;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            // 
+            // comboBoxPaciente
+            // 
+            this.comboBoxPaciente.DisplayMember = "Nome";
+            this.comboBoxPaciente.FormattingEnabled = true;
+            this.comboBoxPaciente.Location = new System.Drawing.Point(804, 129);
+            this.comboBoxPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxPaciente.Name = "comboBoxPaciente";
+            this.comboBoxPaciente.Size = new System.Drawing.Size(303, 23);
+            this.comboBoxPaciente.TabIndex = 12;
+            this.comboBoxPaciente.ValueMember = "Codigo";
+            // 
             // EnderecosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1298, 450);
+            this.ClientSize = new System.Drawing.Size(1136, 338);
             this.Controls.Add(this.comboBoxPaciente);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonCancelar);
@@ -217,8 +228,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.maskedTextBoxCep);
             this.Controls.Add(this.labelEnderecos);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EnderecosForm";
             this.Text = "EnderecosForm";
+            this.Load += new System.EventHandler(this.EnderecosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
