@@ -13,56 +13,21 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             LerArquivo();
         }
 
-        // Método que expõe a lsita de pacientes que tem o encapsulamento privado
-        public List<Paciente> ObterTodos()
+        public void Apagar(int codigo)
         {
-            return pacientes;
-        }
-
-        public Paciente ObterPorNomePaciente(string nomePaciente)
-        {
-            // Percorrer a lista de pacientes para encontrar o paciente por nome
             for (int i = 0; i < pacientes.Count; i++)
             {
-                // Obter o paciente que está sendo percorrido
                 var paciente = pacientes[i];
 
-                // Verificar se o paciente atual contém o nome do paciente escolhido
-                if(paciente.Nome == nomePaciente)
+                if (paciente.Codigo == codigo)
                 {
-                    return paciente;
+                    pacientes.Remove(paciente);
+
+                    SalvarArquivo();
+
+                    return;
                 }
             }
-
-            // Retorna null quando não encontrar nenhum paciente com o nome do paciente escolhido
-            return null;
-        }
-
-        private void LerArquivo()
-        {
-            // Verificar se o arquivo não existe
-            if (File.Exists("pacientes.json") == false)
-                return;
-
-            // Ler arquivo JSON com a lista de pacientes
-            var pacientesJson = File.ReadAllText("pacientes.json");
-
-            // Converter JSON para lista de objetos de pacientes
-            pacientes = JsonConvert.DeserializeObject<List<Paciente>>(pacientesJson);
-        }
-
-        public int ObterUltimoCodigo()
-        {
-            int ultimoCodigo = 0;
-
-            for (int i = 0; 1 < pacientes.Count; i++)
-            {
-                var paciente = pacientes[i];
-
-                ultimoCodigo = paciente.Codigo;
-            }
-
-            return ultimoCodigo;
         }
 
         public void Cadastrar(Paciente paciente)
@@ -83,6 +48,25 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             SalvarArquivo();
         }
 
+        private void LerArquivo()
+        {
+            // Verificar se o arquivo não existe
+            if (File.Exists("pacientes.json") == false)
+                return;
+
+            // Ler arquivo JSON com a lista de pacientes
+            var pacientesJson = File.ReadAllText("pacientes.json");
+
+            // Converter JSON para lista de objetos de pacientes
+            pacientes = JsonConvert.DeserializeObject<List<Paciente>>(pacientesJson);
+        }
+
+        public void SalvarArquivo()
+        {
+            var pacientesJson = JsonConvert.SerializeObject(pacientes);
+            File.WriteAllText("pacientes.json", pacientesJson);
+        }
+
         public Paciente ObterPorCodigo(int codigo)
         {
             for (int i = 0; i < pacientes.Count; i++)
@@ -97,27 +81,43 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             return null;
         }
 
-        public void Apagar(int codigo)
+        public Paciente ObterPorNomePaciente(string nomePaciente)
         {
-            for(int i = 0; i < pacientes.Count; i++)
+            // Percorrer a lista de pacientes para encontrar o paciente por nome
+            for (int i = 0; i < pacientes.Count; i++)
+            {
+                // Obter o paciente que está sendo percorrido
+                var paciente = pacientes[i];
+
+                // Verificar se o paciente atual contém o nome do paciente escolhido
+                if (paciente.Nome == nomePaciente)
+                {
+                    return paciente;
+                }
+            }
+
+            // Retorna null quando não encontrar nenhum paciente com o nome do paciente escolhido
+            return null;
+        }
+
+        // Método que expõe a lsita de pacientes que tem o encapsulamento privado
+        public List<Paciente> ObterTodos()
+        {
+            return pacientes;
+        }
+
+        public int ObterUltimoCodigo()
+        {
+            int ultimoCodigo = 0;
+
+            for (int i = 0; 1 < pacientes.Count; i++)
             {
                 var paciente = pacientes[i];
 
-                if (paciente.Codigo == codigo)
-                {
-                    pacientes.Remove(paciente);
-
-                    SalvarArquivo();
-
-                    return;
-                }
+                ultimoCodigo = paciente.Codigo;
             }
-        }
 
-        public void SalvarArquivo()
-        {
-            var pacientesJson = JsonConvert.SerializeObject(pacientes);
-            File.WriteAllText("pacientes.json", pacientesJson);
+            return ultimoCodigo;
         }
     }
 }

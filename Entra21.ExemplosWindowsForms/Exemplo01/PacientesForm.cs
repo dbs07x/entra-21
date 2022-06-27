@@ -19,25 +19,6 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             ListarPacientes();
         }
 
-        private void buttonSalvar_Click(object sender, EventArgs e)
-        {
-            // Obter as informações dos campos
-            var nome = textBoxNome.Text.Trim();
-            var altura = Convert.ToDouble(textBoxAltura.Text.Trim());
-            var peso = Convert.ToDouble(textBoxPeso.Text.Trim());
-
-            // Verifica se esta em modo adição
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                AdicionarPaciente(nome, peso, altura);
-
-                return;
-            }
-
-            EditarDados(nome, peso, altura);
-
-        }
-
         private void buttonApagar_Click(object sender, EventArgs e)
         {
             // Obter a quantidade de linhas que o usuário selecionou no DataGridView
@@ -69,7 +50,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um paciente.");
+                MessageBox.Show("Selecione um paciente.", "Aviso", MessageBoxButtons.OK);
                 return;
             }
 
@@ -84,6 +65,47 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             textBoxNome.Text = nome;
             textBoxAltura.Text = altura.ToString();
             textBoxPeso.Text = peso.ToString();
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            // Obter as informações dos campos
+            var nome = textBoxNome.Text.Trim();
+            var altura = Convert.ToDouble(textBoxAltura.Text.Trim());
+            var peso = Convert.ToDouble(textBoxPeso.Text.Trim());
+
+            // Verifica se esta em modo adição
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                AdicionarPaciente(nome, peso, altura);
+
+                return;
+            }
+
+            EditarDados(nome, peso, altura);
+
+        }
+        private void PacientesForm_Load(object sender, EventArgs e)
+        {
+            ListarPacientes();
+        }
+
+        private void AdicionarPaciente(string nome, double peso, double altura)
+        {
+            var paciente = new Paciente
+            {
+                Codigo = pacienteServico.ObterUltimoCodigo() + 1,
+                Nome = nome,
+                Altura = altura,
+                Peso = peso
+            };
+
+            // Adicionar na lista e atualizar o arquivo JSON
+            pacienteServico.Cadastrar(paciente);
+
+            LimparCampos();
+
+            ListarPacientes();
         }
 
         private void EditarDados(string nome, double peso, double altura)
@@ -101,24 +123,6 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
             // Alterar o paciente na lista de pacientes e atualizando o arquivo JSON
             pacienteServico.Editar(paciente);
-
-            LimparCampos();
-
-            ListarPacientes();
-        }
-
-        private void AdicionarPaciente(string nome, double peso, double altura)
-        {
-            var paciente = new Paciente
-            {
-                Codigo = pacienteServico.ObterUltimoCodigo() + 1,
-                Nome = nome,
-                Altura = altura,
-                Peso = peso
-            };
-
-            // Adicionar na lista e atualizar o arquivo JSON
-            pacienteServico.Cadastrar(paciente);
 
             LimparCampos();
 
@@ -151,20 +155,15 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
                 // Adiciona o paciente que estava no arquivo json no DataGridView
                 dataGridView1.Rows.Add(new object[]
                 {
-paciente.Codigo,
-paciente.Nome,
-paciente.Altura,
-paciente.Peso,
-paciente.ObterImc()
+                    paciente.Codigo,
+                    paciente.Nome,
+                    paciente.Altura,
+                    paciente.Peso,
+                    paciente.ObterImc()
                 });
             }
 
             dataGridView1.ClearSelection();
-        }
-
-        private void PacientesForm_Load(object sender, EventArgs e)
-        {
-            ListarPacientes();
         }
     }
 }
