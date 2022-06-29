@@ -142,5 +142,22 @@
             var obterMediaIdade = 0.0;
             return obterMediaIdade;
         }
+
+        public Aluno ObterAlunoPorCodigoMatricula(int codigoMatricula)
+        {
+            var aluno = codigoMatricula;
+
+            for (var i = 0; i < alunos.Count; i++)
+            {
+                var alunoAtual = alunos[i];
+
+                if (alunoAtual.CodigoMatricula == aluno)
+                {
+                    return alunoAtual;
+                }
+            }
+
+            return null;
+        }
     }
 }
