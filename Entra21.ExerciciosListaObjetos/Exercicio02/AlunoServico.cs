@@ -39,6 +39,17 @@
 
         public bool EditarDadosCadastrais(int codigoMatricula, string nome, int idade, string materiaFavorita)
         {
+            var alunoParaEditarDados = ObterAlunoPorCodigoMatricula(codigoMatricula);
+
+            if (alunoParaEditarDados != null)
+            {
+                alunoParaEditarDados.Nome = nome;
+                alunoParaEditarDados.Idade = idade;
+                alunoParaEditarDados.MateriaFavorita = materiaFavorita;
+
+                return true;
+            }
+
             return false;
         }
 
