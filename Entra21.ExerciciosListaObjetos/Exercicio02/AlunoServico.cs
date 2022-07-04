@@ -150,8 +150,20 @@
 
         public double ObterMediaIdade()
         {
-            var obterMediaIdade = 0.0;
-            return obterMediaIdade;
+            var alunos = ObterTudo();
+
+            var somaIdade = 0.0;
+
+            for (var i = 0; i < alunos.Count; i++)
+            {
+                var idadeAlunoAtual = Convert.ToDouble(alunos[i].Idade);
+
+                somaIdade = idadeAlunoAtual + somaIdade;
+            }
+
+            double mediaIdade = somaIdade / alunos.Count;
+
+            return mediaIdade;
         }
 
         public Aluno ObterAlunoPorCodigoMatricula(int codigoMatricula)
