@@ -182,5 +182,22 @@
 
             return null;
         }
+
+        private Aluno ObterAlunoPorNome(string nome)
+        {
+            var aluno = nome;
+
+            for (var i = 0; i < alunos.Count; i++)
+            {
+                var alunoAtual = alunos[i];
+
+                if (alunoAtual.Nome == aluno)
+                {
+                    return alunoAtual;
+                }
+            }
+
+            return null;
+        }
     }
 }
