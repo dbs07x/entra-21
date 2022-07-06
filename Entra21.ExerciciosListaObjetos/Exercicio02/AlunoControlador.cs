@@ -95,5 +95,25 @@
                     "\nNome: " + alunoAtual.Nome + "\n");
             }
         }
+
+        private void ListarMedias()
+        {
+            var media = alunoServico.ObterMedias();
+            var aluno = alunoServico.ObterNomes();
+
+            var listaAlunosComMedias = "";
+
+            for (var i = 0; i < media.Count; i++)
+            {
+                var mediaAtual = media[i];
+                var alunoAtual = aluno[i];
+
+                listaAlunosComMedias = $@"{listaAlunosComMedias}
+Nome: {alunoAtual} - Média: {mediaAtual:F}";
+            }
+
+            Console.WriteLine($@"
+Alunos cadastrados e suas médias{listaAlunosComMedias}");
+        }
     }
 }
