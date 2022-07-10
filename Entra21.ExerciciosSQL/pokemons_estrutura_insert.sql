@@ -873,3 +873,19 @@ UPDATE pokemons
 SELECT codigo, defesa, ataque, especial_ataque, especial_defesa
 	FROM pokemons
 	WHERE especial_defesa = 3 AND especial_ataque = 4;
+
+-- Condição: nome contiver mais 10 caracteres
+-- Coluna: nome
+-- Valor: obter somente os dez caracteres do nome
+
+-- Condição: descrição contiver flames
+-- Coluna: categoria
+-- Valor: water
+
+UPDATE pokemons
+	SET categoria =	'water'
+	WHERE descricao LIKE '%flames%'
+
+SELECT descricao, categoria
+	FROM pokemons
+	WHERE descricao LIKE '%flames%'
