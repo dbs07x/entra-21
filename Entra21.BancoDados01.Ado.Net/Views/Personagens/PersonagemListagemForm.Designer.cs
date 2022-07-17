@@ -28,115 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelNome = new System.Windows.Forms.Label();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.labelEditora = new System.Windows.Forms.Label();
-            this.comboBoxEditora = new System.Windows.Forms.ComboBox();
-            this.labelTipoPersonagem = new System.Windows.Forms.Label();
-            this.comboBoxTipoPersonagem = new System.Windows.Forms.ComboBox();
-            this.buttonSalvar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonApagar = new System.Windows.Forms.Button();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonCadastro = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTipoPersonagem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEditora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelNome
+            // buttonApagar
             // 
-            this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(12, 9);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(40, 15);
-            this.labelNome.TabIndex = 0;
-            this.labelNome.Text = "Nome";
+            this.buttonApagar.Location = new System.Drawing.Point(237, 8);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(75, 23);
+            this.buttonApagar.TabIndex = 0;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
             // 
-            // textBoxNome
+            // buttonEditar
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(12, 27);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(278, 23);
-            this.textBoxNome.TabIndex = 1;
+            this.buttonEditar.Location = new System.Drawing.Point(318, 8);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.TabIndex = 1;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
             // 
-            // labelEditora
+            // buttonCadastro
             // 
-            this.labelEditora.AutoSize = true;
-            this.labelEditora.Location = new System.Drawing.Point(12, 53);
-            this.labelEditora.Name = "labelEditora";
-            this.labelEditora.Size = new System.Drawing.Size(44, 15);
-            this.labelEditora.TabIndex = 2;
-            this.labelEditora.Text = "Editora";
+            this.buttonCadastro.Location = new System.Drawing.Point(399, 8);
+            this.buttonCadastro.Name = "buttonCadastro";
+            this.buttonCadastro.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastro.TabIndex = 2;
+            this.buttonCadastro.Text = "Cadastro";
+            this.buttonCadastro.UseVisualStyleBackColor = true;
+            this.buttonCadastro.Click += new System.EventHandler(this.buttonCadastro_Click);
             // 
-            // comboBoxEditora
+            // dataGridView1
             // 
-            this.comboBoxEditora.FormattingEnabled = true;
-            this.comboBoxEditora.Location = new System.Drawing.Point(12, 71);
-            this.comboBoxEditora.Name = "comboBoxEditora";
-            this.comboBoxEditora.Size = new System.Drawing.Size(278, 23);
-            this.comboBoxEditora.TabIndex = 3;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
+            this.ColumnNome,
+            this.ColumnTipoPersonagem,
+            this.ColumnEditora});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(462, 356);
+            this.dataGridView1.TabIndex = 3;
             // 
-            // labelTipoPersonagem
+            // ColumnId
             // 
-            this.labelTipoPersonagem.AutoSize = true;
-            this.labelTipoPersonagem.Location = new System.Drawing.Point(12, 97);
-            this.labelTipoPersonagem.Name = "labelTipoPersonagem";
-            this.labelTipoPersonagem.Size = new System.Drawing.Size(99, 15);
-            this.labelTipoPersonagem.TabIndex = 4;
-            this.labelTipoPersonagem.Text = "Tipo Personagem";
+            this.ColumnId.HeaderText = "Código";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
             // 
-            // comboBoxTipoPersonagem
+            // ColumnNome
             // 
-            this.comboBoxTipoPersonagem.DisplayMember = "Tipo";
-            this.comboBoxTipoPersonagem.FormattingEnabled = true;
-            this.comboBoxTipoPersonagem.Location = new System.Drawing.Point(12, 115);
-            this.comboBoxTipoPersonagem.Name = "comboBoxTipoPersonagem";
-            this.comboBoxTipoPersonagem.Size = new System.Drawing.Size(278, 23);
-            this.comboBoxTipoPersonagem.TabIndex = 5;
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
             // 
-            // buttonSalvar
+            // ColumnTipoPersonagem
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(215, 144);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalvar.TabIndex = 6;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            this.ColumnTipoPersonagem.HeaderText = "Tipo Personagem";
+            this.ColumnTipoPersonagem.Name = "ColumnTipoPersonagem";
+            this.ColumnTipoPersonagem.ReadOnly = true;
             // 
-            // buttonCancelar
+            // ColumnEditora
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(134, 144);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancelar.TabIndex = 7;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.ColumnEditora.HeaderText = "Editora";
+            this.ColumnEditora.Name = "ColumnEditora";
+            this.ColumnEditora.ReadOnly = true;
             // 
-            // PersonagemListagemForm
+            // PersonagemCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 254);
-            this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(this.comboBoxTipoPersonagem);
-            this.Controls.Add(this.labelTipoPersonagem);
-            this.Controls.Add(this.comboBoxEditora);
-            this.Controls.Add(this.labelEditora);
-            this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.labelNome);
-            this.Name = "PersonagemListagemForm";
-            this.Text = "PersonagemListagemForm";
+            this.ClientSize = new System.Drawing.Size(485, 407);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.buttonCadastro);
+            this.Controls.Add(this.buttonEditar);
+            this.Controls.Add(this.buttonApagar);
+            this.Name = "PersonagemCadastroEdicaoForm";
+            this.Text = "PersonagemCadastroEdicaoForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Label labelNome;
-        private TextBox textBoxNome;
-        private Label labelEditora;
-        private ComboBox comboBoxEditora;
-        private Label labelTipoPersonagem;
-        private ComboBox comboBoxTipoPersonagem;
-        private Button buttonSalvar;
-        private Button buttonCancelar;
+        private Button buttonApagar;
+        private Button buttonEditar;
+        private Button buttonCadastro;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn ColumnId;
+        private DataGridViewTextBoxColumn ColumnNome;
+        private DataGridViewTextBoxColumn ColumnTipoPersonagem;
+        private DataGridViewTextBoxColumn ColumnEditora;
     }
 }
