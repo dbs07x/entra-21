@@ -16,10 +16,5 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
         {
             InitializeComponent();
         }
-
-        private void buttonCadastro_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
