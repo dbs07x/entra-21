@@ -65,6 +65,7 @@
             // 
             // comboBoxEditora
             // 
+            this.comboBoxEditora.DisplayMember = "Nome";
             this.comboBoxEditora.FormattingEnabled = true;
             this.comboBoxEditora.Location = new System.Drawing.Point(12, 71);
             this.comboBoxEditora.Name = "comboBoxEditora";
@@ -108,7 +109,7 @@
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // PersonagemListagemForm
+            // PersonagemCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,7 +122,7 @@
             this.Controls.Add(this.labelEditora);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelNome);
-            this.Name = "PersonagemListagemForm";
+            this.Name = "PersonagemCadastroEdicaoForm";
             this.Text = "PersonagemListagemForm";
             this.ResumeLayout(false);
             this.PerformLayout();

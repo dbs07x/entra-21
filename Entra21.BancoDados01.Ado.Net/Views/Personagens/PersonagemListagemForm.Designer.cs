@@ -47,6 +47,7 @@
             this.buttonApagar.TabIndex = 0;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // buttonEditar
             // 
@@ -56,6 +57,7 @@
             this.buttonEditar.TabIndex = 1;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonCadastro
             // 
@@ -109,7 +111,7 @@
             this.ColumnEditora.Name = "ColumnEditora";
             this.ColumnEditora.ReadOnly = true;
             // 
-            // PersonagemCadastroEdicaoForm
+            // PersonagemListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,7 +120,7 @@
             this.Controls.Add(this.buttonCadastro);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonApagar);
-            this.Name = "PersonagemCadastroEdicaoForm";
+            this.Name = "PersonagemListagemForm";
             this.Text = "PersonagemCadastroEdicaoForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -67,7 +67,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "SELECT id, id_tipo_personagem, id_editora, nome" +
+            comando.CommandText = "SELECT id, id_tipo_personagem, id_editora, nome " +
                 "FROM personagens WHERE id = @ID";
             // Substituir o @ do comando do select com o id
             comando.Parameters.AddWithValue("@ID", id);
@@ -89,7 +89,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
             personagem.Editora.Id = Convert.ToInt32(registro["id_editora"]);
 
             personagem.TipoPersonagem = new TipoPersonagem();
-            personagem.TipoPersonagem.Id = Convert.ToInt32(registro["id_tipo_registro"]);
+            personagem.TipoPersonagem.Id = Convert.ToInt32(registro["id_tipo_personagem"]);
 
             personagem.Nome = registro["nome"].ToString();
 

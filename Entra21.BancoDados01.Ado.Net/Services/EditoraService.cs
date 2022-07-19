@@ -10,7 +10,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "SELECT id, nome, apelido, data_criacao, faturamente FROM editoras";
+            comando.CommandText = "SELECT id, nome, apelido, data_criacao, faturamento FROM editoras";
 
             // Instanciado tabela em memória para armazenar os registros da consulta
             var tabelaEmMemoria = new DataTable();
@@ -27,11 +27,11 @@ namespace Entra21.BancoDados01.Ado.Net.Services
                 var linha = tabelaEmMemoria.Rows[i];
 
                 var editora = new Editora();
-                editora.Id = Convert.ToInt32(linha[0]);
-                editora.Nome = linha[1].ToString();
-                editora.Apelido = linha[2].ToString();
-                editora.DataCriacao = Convert.ToDateTime(linha[3]);
-                editora.Faturamento = Convert.ToDecimal(linha[4]);
+                editora.Id = Convert.ToInt32(linha["id"]);
+                editora.Nome = linha["nome"].ToString();
+                editora.Apelido = linha["apelido"].ToString();
+                editora.DataCriacao = Convert.ToDateTime(linha["data_criacao"]);
+                editora.Faturamento = Convert.ToDecimal(linha["faturamento"]);
 
                 editoras.Add(editora);
             }
