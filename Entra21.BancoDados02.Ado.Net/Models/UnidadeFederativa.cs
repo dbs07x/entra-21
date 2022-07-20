@@ -1,6 +1,9 @@
 ﻿namespace Entra21.BancoDados02.Ado.Net.Models
 {
-    internal class UnidadeFederativa
+    public class UnidadeFederativa
     {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Sigla { get; set; }
     }
 }
