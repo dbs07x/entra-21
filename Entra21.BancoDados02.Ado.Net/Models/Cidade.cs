@@ -7,5 +7,6 @@
         public int QuantidadeHabitantes { get; set; }
         public DateTime DataHoraFundacao { get; set; }
         public decimal Pib { get; set; }
+        public UnidadeFederativa UnidadeFederativa { get; set; }
     }
 }

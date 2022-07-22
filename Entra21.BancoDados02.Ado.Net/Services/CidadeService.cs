@@ -1,5 +1,6 @@
 ﻿using Entra21.BancoDados02.Ado.Net.DataBase;
 using Entra21.BancoDados02.Ado.Net.Models;
+using System.Data;
 
 namespace Entra21.BancoDados02.Ado.Net.Services
 {
@@ -24,13 +25,14 @@ namespace Entra21.BancoDados02.Ado.Net.Services
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "INSERT INTO cidades (id_tipo_personagem, id_editora, nome) VALUES (@ID_TIPO_PERSONAGEM, @ID_EDITORA, @NOME);";
+            comando.CommandText = @"INSERT INTO cidades (id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib) 
+VALUES (@ID_UNIDADE_FEDERATIVA, @NOME, @QUANTIDADE_HABITANTES, @DATA_HORA_FUNDACAO, @PIB);";
 
-            comando.Parameters.AddWithValue("@ID_TIPO_PERSONAGEM", personagem.TipoPersonagem.Id);
-            
-            comando.Parameters.AddWithValue("@ID_EDITORA", personagem.Editora.Id);
-            
-            comando.Parameters.AddWithValue("@NOME", personagem.Nome);
+            comando.Parameters.AddWithValue("@ID_UNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
+            comando.Parameters.AddWithValue("@NOME", cidade.Nome);
+            comando.Parameters.AddWithValue("@QUANTIDADE_HABITANTES", cidade.QuantidadeHabitantes);
+            comando.Parameters.AddWithValue("@DATA_HORA_FUNDACAO", cidade.DataHoraFundacao);
+            comando.Parameters.AddWithValue("@PIB", cidade.Pib);
 
             comando.ExecuteNonQuery();
 
@@ -39,12 +41,49 @@ namespace Entra21.BancoDados02.Ado.Net.Services
 
         public void Editar(Cidade cidade)
         {
-            throw new NotImplementedException();
+            var conexao = new Conexao().Conectar();
+            var comando = conexao.CreateCommand();
+
+            comando.CommandText = "UPDATE cidades SET id_unidade_federativa = @ID_UNIDADE_FEDERATIVA, nome = @NOME, " +
+                "quantidade_habitantes = @QUANTIDADE_HABITANTES, data_hora_fundacao = @DATA_HORA_FUNDACAO, pib = @PIB " +
+                "WHERE id = @ID";
+
+            comando.Parameters.AddWithValue("@ID_UNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
+            comando.Parameters.AddWithValue("@NOME", cidade.Nome);
+            comando.Parameters.AddWithValue("@QUANTIDADE_HABITANTES", cidade.QuantidadeHabitantes);
+            comando.Parameters.AddWithValue("@DATA_HORA_FUNDACAO", cidade.DataHoraFundacao);
+            comando.Parameters.AddWithValue("@PIB", cidade.Pib);
+            comando.Parameters.AddWithValue("@ID", cidade.Id);
+
+            comando.ExecuteNonQuery();
+
+            comando.Connection.Close();
         }
 
         public Cidade ObterPorId(int id)
         {
-            throw new NotImplementedException();
+            var conexao = new Conexao().Conectar();
+            var comando = conexao.CreateCommand();
+            comando.CommandText = "SELECT id, id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib FROM cidades WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+
+            var dataTable = new DataTable();
+            dataTable.Load(comando.ExecuteReader());
+            if (dataTable.Rows.Count == 0)
+                return null;
+
+            var registro = dataTable.Rows[0];
+            var cidade = new Cidade();
+            cidade.Id = Convert.ToInt32(registro["id"]);
+
+            cidade.UnidadeFederativa = new UnidadeFederativa();
+            cidade.UnidadeFederativa.Id = Convert.ToInt32(registro["id_unidade_federativa"]);
+
+            cidade.Nome = registro["nome"].ToString();
+
+            conexao.Close();
+
+            return cidade;
         }
 
         public List<Cidade> ObterTodos()
