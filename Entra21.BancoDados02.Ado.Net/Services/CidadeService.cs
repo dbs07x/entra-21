@@ -87,7 +87,26 @@ quantidade_habitantes = @QUANTIDADE_HABITANTES, data_hora_fundacao = @DATA_HORA_
 
         public List<Cidade> ObterTodos()
         {
-            throw new NotImplementedException();
+            var conexao = new Conexao().Conectar();
+            var comando = conexao.CreateCommand();
+
+            comando.CommandText = @"..."; // <<<
+            var tabelaEmMemoria = new DataTable();
+            tabelaEmMemoria.Load(comando.ExecuteReader());
+
+            var cidades = new List<Cidade>();
+
+            for (int i = 0; i < tabelaEmMemoria.Rows.Count; i++)
+            {
+                var registro = tabelaEmMemoria.Rows[i];
+
+                var cidade = new Cidade();
+                cidade.Id = Convert.ToInt32(registro["id"]);
+                cidade.Nome = registro["nome"].ToString();
+
+                cidades.Add(cidade);
+            }
+            return cidades;
         }
     }
 }
