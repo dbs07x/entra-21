@@ -1,4 +1,5 @@
-﻿using Entra21.BancoDados02.Ado.Net.Models;
+﻿using Entra21.BancoDados02.Ado.Net.DataBase;
+using Entra21.BancoDados02.Ado.Net.Models;
 
 namespace Entra21.BancoDados02.Ado.Net.Services
 {
@@ -6,7 +7,16 @@ namespace Entra21.BancoDados02.Ado.Net.Services
     {
         public void Apagar(int id)
         {
-            throw new NotImplementedException();
+            var conexao = new Conexao().Conectar();
+            var comando = conexao.CreateCommand();
+
+            comando.CommandText = "DELETE FROM unidades_federativas WHERE id = @ID";
+
+            comando.Parameters.AddWithValue("@ID", id);
+
+            comando.ExecuteNonQuery();
+
+            comando.Connection.Close();
         }
 
         public void Cadastrar(UnidadeFederativa unidadeFederativa)
