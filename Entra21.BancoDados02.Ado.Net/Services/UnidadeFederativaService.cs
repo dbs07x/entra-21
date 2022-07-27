@@ -21,7 +21,13 @@ namespace Entra21.BancoDados02.Ado.Net.Services
 
         public void Cadastrar(UnidadeFederativa unidadeFederativa)
         {
-            throw new NotImplementedException();
+            var conexao = new Conexao().Conectar();
+            var comando = conexao.CreateCommand();
+            comando.CommandText = "...";
+
+            comando.ExecuteNonQuery();
+
+            comando.Connection.Close();
         }
 
         public void Editar(UnidadeFederativa unidadeFederativa)
