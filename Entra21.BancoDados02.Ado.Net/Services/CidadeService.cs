@@ -90,7 +90,17 @@ quantidade_habitantes = @QUANTIDADE_HABITANTES, data_hora_fundacao = @DATA_HORA_
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"..."; // <<<
+            comando.CommandText = @"SELECT
+c.id AS 'id',
+c.nome AS 'nome',
+c.quantidade_habitantes AS 'quantidade_habitantes',
+c.data_hora_fundacao AS 'data_hora_fundacao',
+c.pib AS 'pib',
+uf.id AS 'unidade_federativa_id',
+uf.sigla AS 'sigla'
+FROM cidades AS c
+INNER JOIN unidades_federativas AS uf ON(c.id_unidade_federativa = uf.id)";
+
             var tabelaEmMemoria = new DataTable();
             tabelaEmMemoria.Load(comando.ExecuteReader());
 
