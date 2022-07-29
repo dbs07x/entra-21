@@ -32,7 +32,10 @@ namespace Entra21.BancoDados02.Ado.Net.Services
 
         public void Editar(UnidadeFederativa unidadeFederativa)
         {
-            throw new NotImplementedException();
+            var conexao = new Conexao().Conectar();
+            var comando = conexao.CreateCommand();
+
+            comando.CommandText = @"...";
         }
 
         public UnidadeFederativa ObterPorId(int id)
