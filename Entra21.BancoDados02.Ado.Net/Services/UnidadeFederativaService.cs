@@ -40,7 +40,8 @@ namespace Entra21.BancoDados02.Ado.Net.Services
 
         public UnidadeFederativa ObterPorId(int id)
         {
-            throw new NotImplementedException();
+            var conexao = new Conexao().Conectar();
+            var comando = conexao.CreateCommand();
         }
 
         public List<UnidadeFederativa> ObterTodos()
